@@ -7,7 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class FizzBuzTest {
 
     @Test
-    void justAnExample() {
-        assertEquals(1, 1);
+    void shouldReturnFizz() {
+        // GIVEN
+        int input = 3;
+        String expected = "Fizz";
+
+        // WHEN
+        String result = FizzBuz.execute(input);
+
+        // THEN
+        assertEquals(result, expected);
     }
 }
