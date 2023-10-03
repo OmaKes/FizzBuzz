@@ -1,19 +1,30 @@
 package com.kata.fizzbuz;
 
 public class FizzBuz {
+    public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
+
     public static String execute(int input) {
+        StringBuilder inputRepresentation = new StringBuilder();
 
-        if (input % 3 == 0 && input % 5 == 0) {
-            return "FizzBuzz";
+        fizzCase(input, inputRepresentation);
+        buzzCase(input, inputRepresentation);
+
+        if (inputRepresentation.length() == 0) {
+            inputRepresentation.append(input);
         }
+        return inputRepresentation.toString();
+    }
 
-        if (input % 3 == 0) {
-            return "Fizz";
-        }
-
+    private static void buzzCase(int input, StringBuilder inputRepresentation) {
         if (input % 5 == 0) {
-            return "Buzz";
+            inputRepresentation.append(BUZZ);
         }
-        return input+"";
+    }
+
+    private static void fizzCase(int input, StringBuilder inputRepresentation) {
+        if (input % 3 == 0) {
+            inputRepresentation.append(FIZZ);
+        }
     }
 }
