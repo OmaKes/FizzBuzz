@@ -43,4 +43,43 @@ class FizzBuzTest {
         // THEN
         assertEquals(result, expected);
     }
+
+    @Test
+    void shouldReturnBuzzForFiveInput() {
+        // GIVEN
+        int input = 5;
+        String expected = "Buzz";
+
+        // WHEN
+        String result = FizzBuz.execute(input);
+
+        // THEN
+        assertEquals(result, expected);
+    }
+
+    @Test
+    void shouldReturnBuzzForTenInput() {
+        // GIVEN
+        int input = 10;
+        String expected = "Buzz";
+
+        // WHEN
+        String result = FizzBuz.execute(input);
+
+        // THEN
+        assertEquals(result, expected);
+    }
+
+    @Test
+    void shouldReturnBuzzForTwentyFiveInput() {
+        // GIVEN
+        int input = 25;
+        String expected = "Buzz";
+
+        // WHEN
+        String result = FizzBuz.execute(input);
+
+        // THEN
+        assertEquals(result, expected);
+    }
 }
