@@ -120,4 +120,30 @@ class FizzBuzTest {
         // THEN
         assertEquals(result, expected);
     }
+
+    @Test
+    void shouldReturnOneForOneInput() {
+        // GIVEN
+        int input = 1;
+        String expected = "1";
+
+        // WHEN
+        String result = FizzBuz.execute(input);
+
+        // THEN
+        assertEquals(result, expected);
+    }
+
+    @Test
+    void shouldReturnTwoForTwoInput() {
+        // GIVEN
+        int input = 2;
+        String expected = "2";
+
+        // WHEN
+        String result = FizzBuz.execute(input);
+
+        // THEN
+        assertEquals(result, expected);
+    }
 }

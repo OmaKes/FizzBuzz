@@ -14,6 +14,6 @@ public class FizzBuz {
         if (input % 5 == 0) {
             return "Buzz";
         }
-        return null;
+        return input+"";
     }
 }
